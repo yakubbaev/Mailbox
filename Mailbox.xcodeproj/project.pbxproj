@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F4602CF5B1246218813488A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE5714BF8FA4AD0B0D5B341 /* libPods.a */; };
 		5244217B172730C200804500 /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5244217A172730C200804500 /* ApiClient.m */; };
+		524421941727350000804500 /* Email.m in Sources */ = {isa = PBXBuildFile; fileRef = 524421931727350000804500 /* Email.m */; };
+		524421A31727410C00804500 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 524421A21727410C00804500 /* User.m */; };
 		5288C05017272BBF00F27F84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5288C04F17272BBF00F27F84 /* UIKit.framework */; };
 		5288C05217272BBF00F27F84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5288C05117272BBF00F27F84 /* Foundation.framework */; };
 		5288C05417272BBF00F27F84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5288C05317272BBF00F27F84 /* CoreGraphics.framework */; };
@@ -25,6 +27,10 @@
 		4AE5714BF8FA4AD0B0D5B341 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		52442179172730C200804500 /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiClient.h; sourceTree = "<group>"; };
 		5244217A172730C200804500 /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiClient.m; sourceTree = "<group>"; };
+		524421921727350000804500 /* Email.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Email.h; sourceTree = "<group>"; };
+		524421931727350000804500 /* Email.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Email.m; sourceTree = "<group>"; };
+		524421A11727410C00804500 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		524421A21727410C00804500 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5288C04B17272BBF00F27F84 /* Mailbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mailbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5288C04F17272BBF00F27F84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5288C05117272BBF00F27F84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +98,10 @@
 				5288C05617272BBF00F27F84 /* Supporting Files */,
 				52442179172730C200804500 /* ApiClient.h */,
 				5244217A172730C200804500 /* ApiClient.m */,
+				524421921727350000804500 /* Email.h */,
+				524421931727350000804500 /* Email.m */,
+				524421A11727410C00804500 /* User.h */,
+				524421A21727410C00804500 /* User.m */,
 			);
 			path = Mailbox;
 			sourceTree = "<group>";
@@ -211,6 +221,8 @@
 				5288C05C17272BBF00F27F84 /* main.m in Sources */,
 				5288C06017272BBF00F27F84 /* AppDelegate.m in Sources */,
 				5244217B172730C200804500 /* ApiClient.m in Sources */,
+				524421941727350000804500 /* Email.m in Sources */,
+				524421A31727410C00804500 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

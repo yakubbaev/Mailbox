@@ -8,16 +8,27 @@
 
 #import "ApiClient.h"
 #import "AFHTTPRequestOperationLogger.h"
+#import "Email.h"
+#import "AFJSONRequestOperation.h"
 
 @implementation ApiClient
 
-- (void)loadMailsWithSuccess:(void(^)(NSArray *mails))success fail:(void(^)(NSString *errorMessage))fail {
-    [self getPath: @"emails.json" parameters: nil
-          success:^(AFHTTPRequestOperation *operation, id responseObject) {
-              success(nil);
-          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-              fail(nil);
-          }];
+- (void)loadEmailsWithSuccess:(void(^)(NSArray *emails))success fail:(void(^)(NSString *errorMessage))fail {
+    NSURLRequest *request = [self requestWithMethod: @"GET" path: @"emails.json" parameters: nil];
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation JSONRequestOperationWithRequest: request success:^(NSURLRequest *request, NSHTTPURLResponse *response, NSDictionary *JSON) {
+        NSMutableArray *emails = NSMutableArray.new;
+        for (NSDictionary *dict in JSON[@"emails"]) {
+            NSError *error;
+            Email *email = [MTLJSONAdapter modelOfClass: Email.class fromJSONDictionary: dict error: &error];
+            NSAssert(email != nil, [error localizedFailureReason]);
+            [emails addObject: email];
+        }
+        success(emails);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        fail([error localizedFailureReason]);
+    }];
+    [self enqueueHTTPRequestOperation: operation];
 }
 
 + (id)sharedClient {

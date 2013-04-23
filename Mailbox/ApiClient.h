@@ -10,7 +10,7 @@
 
 @interface ApiClient : AFHTTPClient
 
-- (void)loadMailsWithSuccess:(void(^)(NSArray *mails))success fail:(void(^)(NSString *errorMessage))fail;
+- (void)loadEmailsWithSuccess:(void(^)(NSArray *emails))success fail:(void(^)(NSString *errorMessage))fail;
 
 + (id)sharedClient;
 
