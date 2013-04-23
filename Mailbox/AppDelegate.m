@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ApiClient.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [[ApiClient sharedClient] loadMailsWithSuccess:^(NSArray *mails) {
+        
+    } fail:^(NSString *errorMessage) {
+        
+    }];
+    
     return YES;
 }
 

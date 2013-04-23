@@ -1,4 +1,6 @@
 PODS:
+  - AFHTTPRequestOperationLogger (0.10.0):
+    - AFNetworking (>= 0.9.0)
   - AFNetworking (1.2.1)
   - libextobjc/EXTKeyPathCoding (0.2.5):
     - libextobjc/RuntimeExtensions
@@ -10,10 +12,12 @@ PODS:
     - libextobjc/EXTScope
 
 DEPENDENCIES:
+  - AFHTTPRequestOperationLogger
   - AFNetworking
   - Mantle
 
 SPEC CHECKSUMS:
+  AFHTTPRequestOperationLogger: 34ba125cb9eeb77a3b67aaaca105720ba3a0798c
   AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
   libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   Mantle: aa9860e40cc365a094ef60fec46848fee7b03ca7
